@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tools.DemoDao">
+    <resultMap type="tools.Demo" id="demo">
+        <result column="id" property="id"/>
+         <result column="name" property="name"/>
+    </resultMap>
+    <!-- ==================定义sql片段==============
+    sql:是sql片段标签属性id是该片段的唯一标识 -->
+    <select id = "queryDemo" resultMap="demo">
+    	select * from test
+    </select>
+</mapper>
